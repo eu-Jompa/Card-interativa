@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/Logo pequeno.webp">
+  
+<!-- font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<!-- font -->
+
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  
+  <div class="card">
+  
+    <div class="card-front">
+        
+        <img src="images/card-logo.svg" alt="" class="logo-card">
+        <span class="card-number">0000 0000 0000 0000</span>
+        <div class="dados">
+          <span class="card-name">Jane Appleseed </span>
+          <span class="card-date">00/00</span>
+        </div>
+        
+    </div>
+    <div class="card-back">
+      <span class="card-cvc">000</span>
+    </div>
+    
+  </div>
+    
+  <div class="form-card">
+    <form action="">
+
+        <label for="">Nome no Cartão</label>
+        <input type="text" placeholder="Digite o nome que esta no cartão" id="formNomeCard">
+        <label for="">número do cartão</label>
+        <input type="number" placeholder="Digite o número do cartão" id="formNumeroCard">
+        
+        <div class="data-cvc">
+          
+          <div class="form-data">
+            <label for="" class="label-form-data">Exp. Date (MM/YY)</label>
+            <div class="form--data-mes-ano">
+              <input type="number" placeholder="MM" min="1" max="12" maxlength="12" class="form-input-mes">
+              <input type="number" placeholder="yy" maxlength="2" class="form-input-ano">
+            </div>
+          </div>
+          <div class="form-cvc">
+            <label for="">CVC</label>
+            <input type="number" placeholder="000" maxlength="3"class="form-input-cvc">
+          </div>
+        </div>
+        <button>Confirm</button>
+    </form>
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="agradecimento">
+      <span>Thank you!</span>
+      We've added your card details
+      Continue
+    </div> -->
+  </div>
+
+
+  <!-- Cardholder Name
+  e.g. Jane Appleseed
+
+  Card Number
+  e.g. 1234 5678 9123 0000
+
+  Exp. Date (MM/YY)
+  MM
+  YY
+
+  CVC
+  e.g. 123
+
+  Confirm -->
+
+  <!-- Completed state start -->
+  
+  
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script src="script.js"></script>
+</body>
+</html>
