@@ -31,7 +31,11 @@
         <span class="card-number">0000 0000 0000 0000</span>
         <div class="dados">
           <span class="card-name">Jane Appleseed </span>
-          <span class="card-date">00/00</span>
+          <div class="card-date">
+            <span class="card-mes">00</span>
+            <span class="cardBarra">/</span>
+            <span class="card-ano">00</span>
+          </div>
         </div>
         
     </div>
@@ -53,9 +57,10 @@
           
           <div class="form-data">
             <label for="" class="label-form-data">Exp. Date (MM/YY)</label>
-            <div class="form--data-mes-ano">
+            <div class="form-data-mes-ano">
               <input type="number" placeholder="MM" min="1" max="12" maxlength="12" class="form-input-mes">
-              <input type="number" placeholder="yy" maxlength="2" class="form-input-ano">
+
+              <input type="number" placeholder="YY" maxlength="2" class="form-input-ano">
             </div>
           </div>
           <div class="form-cvc">
@@ -63,7 +68,7 @@
             <input type="number" placeholder="000" maxlength="3"class="form-input-cvc">
           </div>
         </div>
-        <button>Confirm</button>
+        <button class="form-button" id="form-confirm">Confirm</button>
     </form>
 
 
