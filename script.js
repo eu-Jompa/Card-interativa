@@ -19,18 +19,38 @@ buttonForm.addEventListener("click",(e)=>{
 });
 
 numeroformcard.addEventListener("keyup", setCardNumberHtml);
+numeroformcard.addEventListener("keydown", FilterNumber);
 nomeformcard.addEventListener("keyup", setCardNameHtml);
 formCardMes.addEventListener("keyup", setformCardMesHtml);
 formCardAno.addEventListener("keyup", setformCardAnoHtml);
 formCardCvc.addEventListener("keyup", setformCardCvcHtml);
 
 
-function setCardNumberHtml(e){
-    cardNumber.textContent = format(e.target.value);
+//Filtrando aceitando apenas números na input
+function FilterNumber(e){
+    const chavesPermitidas = ["Backspace","Delete","ArrowLeft","ArrowRight","Tab"];
+    if(chavesPermitidas.includes(e.key)|| e.key>=0 && e.key<=9){
+        return
+    }
+    e.preventDefault();
 }
+
+function setCardNumberHtml(e){
+    let value = e.target.value;
+
+    cardNumber.textContent = format(value);
+    if(value.length<=16){
+        if (value.length > 16){ 
+            value = value.slice(0, 16); // Limita a 16 dígitos
+            return value.replace(/\d{4}(?=.)/g, "$& ");    
+        }
+    }
+} 
 function setCardNameHtml(e){
     cardName.textContent = e.target.value;
+
 }
+
 
 function setformCardMesHtml(e){
     cardMes.textContent = e.target.value;
@@ -43,6 +63,16 @@ function setformCardCvcHtml(e){
     cardCvc.textContent = e.target.value;
 }
 
-function format(e){
-    return e.toString().replace(/\d{4}(?=.)/g, "$& ");
+function format(value){
+    if(value.length<=16){
+        if (value.length > 16){ 
+            value = value.slice(0, 16); // Limita a 16 dígitos
+            return value.replace(/\d{4}(?=.)/g, "$& ");    
+        }
+        
+        
+        return value.replace(/\d{4}(?=.)/g, "$& ");
+
+    }
+    return value = value.slice(0, 16).replace(/\d{4}(?=.)/g, "$& ");
 }

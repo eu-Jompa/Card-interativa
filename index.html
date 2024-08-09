@@ -11,15 +11,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <!-- font -->
-
-  <title>Frontend Mentor | Interactive card details form</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   
@@ -51,7 +42,7 @@
         <label for="">Nome no Cartão</label>
         <input type="text" placeholder="Digite o nome que esta no cartão" id="formNomeCard">
         <label for="">número do cartão</label>
-        <input type="number" placeholder="Digite o número do cartão" id="formNumeroCard">
+        <input type="text" pattern="[0-9]*" placeholder="Digite o número do cartão" id="formNumeroCard">
         
         <div class="data-cvc">
           
@@ -72,6 +63,10 @@
     </form>
 
 
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
 
 
 
